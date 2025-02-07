@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <%- include('./partials/head') %>
+    </head>
+<body>
+    <%- include('./partials/script') %>
+    <%- include('./partials/nav') %>
+    <%= console.log(user) %>
+    <form class="mx-3 my-2" action="/blog/<%=user._id%>/Addblog" method="post" enctype="multipart/form-data">
+          <div class="mb-3">
+            <label for="myfile">Select Cover Image</label>
+            <input type="file" id="myfile" name="myfile" class="form-control">
+          </div>
+          <div class="mb-3">
+            <label for="formGroupExampleInput" class="form-label">Title</label>
+            <input type="text" class="form-control" id="Title" name="Title" placeholder="Enter Your Title">
+          </div>
+          <div class="mb-3">
+            <label for="formGroupExampleInput2" class="form-label">Author</label>
+            <input type="text" class="form-control" id="Author" name="Author" placeholder="Author Name">
+          </div>
+          <div class="mb-3">
+            <label for="formGroupExampleInput3" class="form-label">Content Area</label>
+          <textarea class="form-control" placeholder="Write Your Content Hear" id="Body" name="Body"></textarea>
+          </div>
+          <div class="mb-3">
+            <label for="formGroupExampleInput4" class="form-label">Category</label>
+            <input type="text" class="form-control" id="Category" name="Category" placeholder="Category">
+          </div>
+          <div class="mb-3">
+           <input type="submit" class="btn btn-primary" value="Submit">
+          </div>
+    </form>
+</body>
+</html>
